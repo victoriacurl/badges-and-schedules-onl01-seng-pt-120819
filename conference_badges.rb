@@ -2,11 +2,15 @@ def badge_maker(name)
   return "Hello, my name is #{name}."
 end
 
+#def batch_badge_creator(name)
+  #attendees = []
+  #counter = 0
+    #badges.each do | badges |
+    #puts "Hello, my name is #{badges}."
+    #counter += 1
+  #end
+#end
+
 def batch_badge_creator(attendees)
-  attendees = []
-  counter = 0
-    badges.each do | badges |
-    puts "Hello, my name is #{badges}."
-    counter += 1
-  end
+  attendees.map { |badges| badge_maker(badges) }
 end
